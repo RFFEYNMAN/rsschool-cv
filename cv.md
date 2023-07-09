@@ -1,5 +1,8 @@
 ## rsschool-cv ##
 
+![2gkDQjAlKOM](https://github.com/RFFEYNMAN/rsschool-cv/assets/90650814/2bd65f6d-fa69-41a0-b7e6-ec9423c38ea0)
+
+
 ## __Andrei kolesnikov__ ##
 
 ### __Contacts__ ###
