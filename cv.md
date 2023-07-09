@@ -4,7 +4,7 @@
 
 
 ## __Andrei kolesnikov__ ##
-[Ссылка на CV в HTML](https://rffeynman.github.io/)
+### Ссылка на CV в HTML### https://rffeynman.github.io/
 ### __Contacts__ ###
     * Location: Wroclaw, Poland
     * Phone: +48 692834210
