@@ -1,0 +1,689 @@
+/* Подключаем modern-normalize для сброса стилей */
+@import 'modern-normalize';
+
+/* Общие стили для body */
+body {
+  font-family: 'Montserrat', sans-serif; /* Устанавливаем шрифт Montserrat */
+  margin: 0; /* Убираем отступы по умолчанию */
+}
+
+/* Стили для контейнера */
+.container {
+  max-width: 1440px; /* Ограничиваем максимальную ширину контейнера */
+  margin: 0 auto; /* Центрируем контейнер по горизонтали */
+  padding: 0 82px; /* Добавляем отступы по бокам */
+}
+
+/* Стили для header */
+.header {
+  /* Auto layout */
+  display: flex; /* Делаем header flex-контейнером */
+  flex-direction: row; /*  Выстраиваем элементы в строку */
+  justify-content: center; /* Центрируем элементы по горизонтали */
+  align-items: center; /* Центрируем элементы по вертикали */
+  padding: 12px 0px; /* Добавляем вертикальные отступы */
+  gap: 12px; /*  Добавляем отступ между элементами */
+  width: 1276px; /*  Устанавливаем ширину header */
+  max-width: 1276px; /*  Ограничиваем максимальную ширину */
+  height: 64px; /*  Устанавливаем высоту header */
+  background: #ffffff; /*  Устанавливаем белый фон */
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Дополнительные стили для контейнера внутри header */
+.header .container {
+  display: flex; /* Делаем контейнер flex-контейнером */
+  align-items: center; /* Выравниваем элементы по вертикали */
+}
+
+/* Стили для логотипа */
+.logo-wrapper {
+  /* Logo */
+  /* Auto layout */
+  display: flex; /* Делаем logo-wrapper flex-контейнером */
+  flex-direction: row; /*  Выстраиваем элементы в строку */
+  align-items: center; /* Центрируем элементы по вертикали */
+  padding: 8px 20px; /*  Добавляем отступы */
+  gap: 8px; /*  Добавляем отступ между элементами */
+  width: 141px; /*  Устанавливаем ширину */
+  height: 40px; /*  Устанавливаем высоту */
+  border-radius: 12px; /*  Добавляем скругление углов */
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-right: 250px; /*  Добавляем отступ справа */
+}
+
+/* Стили для меню */
+.nav {
+  margin-left: 350px; /*  Добавляем отступ слева */
+}
+
+/* Стили для списка меню */
+.nav ul {
+  list-style: none; /* Убираем маркеры списка */
+  margin: 0; /*  Убираем отступы по умолчанию */
+  padding: 0; /*  Убираем отступы по умолчанию */
+  display: flex; /*  Располагаем пункты меню в строку */
+  gap: 30px; /*  Добавляем отступ между пунктами меню */
+}
+
+/* Стили для ссылок в меню */
+.nav li a {
+  text-decoration: none; /* Убираем подчеркивание ссылок */
+  color: #000; /* Устанавливаем чёрный цвет ссылок */
+  font-size: 18px; /* Устанавливаем размер шрифта */
+}
+
+/* Стили для блока с кнопками */
+.actions {
+  margin-left: auto; /*  Прижимаем блок к правому краю */
+  display: flex; /*  Делаем actions flex-контейнером */
+  gap: 20px; /*  Добавляем отступ между кнопками */
+}
+
+/* Стили для кнопок */
+.search-btn,
+.cart-btn {
+  background-color: transparent; /*  Устанавливаем прозрачный фон */
+  border: none; /*  Убираем рамку */
+  cursor: pointer; /*  Меняем курсор на "указатель" */
+}
+
+/* Стили для секции Hero */
+.hero {
+  background-image: url("https://s3-alpha-sig.figma.com/img/81a3/9777/2dfc048014f1902a0c5cef20e2241de5?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Q1x~KyToSjAwmOJeHp53IKm8igOBVjhI8NhdwKZruJmdSOHjPRBkkTIkqc5dPzH9fohKplRu91NV3GGKWNe8NZ0VvKqknaxoCQMqOPESTpfoZZaFJhcr2LTBx84cO5wL20hAWJ-uyfcSKtCy2hiEdYB-aH6WtQ26bu7OQx161-A-hanJ1o5nmb-VQ4YvMFdaeyhYhBYTwHXbkx6Qge-l70zUUgcOj9YvQLwOqC5uzfUduu1xPGsiUy1pbZXy87znO9zHV1KMYaUGK64I9MfkEw5xUrt7bp6k~bqUCbnshJ3bGbXQIvTMfXMFfNjlo2FwoAawwAIeyL60nfMzSSYZ8w__"),
+    url("https://s3-alpha-sig.figma.com/img/2ea8/b50f/f4413900084b629c36d477332220830e?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=p-oqf7~Gldrcg5HTKYO6p8px3yw1YN~gV0xCpZqe2qVxKUwvb9dWYu4EjWNCMSMCdr1k9ojY4zHIYlGxffe0V2ArTTUUzHDCeBWqSfGtUDgzJ1xdR1cQHaaaer9~VltNEq2lsbFf~qWvDimRpALlb9F6At136OZcQ69ZXFSlh8NTHbB0QrsZBHYsxwNelVbIgLyDpXwzgdSqn2-NFVmvt35INTlIraF7GtnwqmhizKFUPOmt7L6HBks6FecAUiI3ASJ-DN9mBj4nxop5-Dtxc3AfHuPSUyNgXhUe4bhnlVHUbyPTaukYOA4P6nMtZmZBBcfWSURvqB~rSApEH42asA__"); /*  Устанавливаем фоновые изображения */
+  background-color: #FF4646; /*  Устанавливаем красный цвет фона */
+  background-size: cover; /*  Растягиваем фоновые изображения */
+  background-repeat: no-repeat; /*  Запрещаем повторение фоновых изображений */
+  padding: 100px 0; /*  Добавляем отступы сверху и снизу */
+  display: flex; /*  Делаем hero flex-контейнером */
+  flex-direction: column; /*  Выстраиваем элементы в колонку */
+  align-items: center; /*  Центрируем элементы по горизонтали */
+}
+
+/* Стили для контейнера внутри hero */
+.hero__container {
+  display: flex; /*  Делаем hero__container flex-контейнером */
+  flex-direction: column; /*  Выстраиваем элементы в колонку */
+  align-items: center; /*  Центрируем элементы по горизонтали */
+  justify-content: center; /*  Центрируем элементы по вертикали */
+  padding: var(--Space60) var(--Space0) var(--Space60) var(--Space0); /*  Добавляем отступы */
+  gap: var(--Space12); /*  Добавляем отступ между элементами */
+}
+
+/* Стили для заголовка в hero */
+.hero__title {  
+  font-size: 48px; /* Устанавливаем размер шрифта заголовка */
+  color: #fff; /* Устанавливаем белый цвет текста */
+  margin-bottom: 20px; /* Добавляем отступ снизу */
+}
+
+.hero__subtitle {
+  font-size: 20px; /* Устанавливаем размер шрифта подзаголовка */
+  color: #fff; /* Устанавливаем белый цвет текста */
+  margin-bottom: 40px; /* Добавляем отступ снизу */
+}
+
+.hero__button {
+  background-color: #FF4646; /* Устанавливаем красный цвет фона кнопки */
+  color: #fff; /* Устанавливаем белый цвет текста кнопки */
+  padding: 15px 30px; /* Добавляем отступы внутри кнопки */
+  border: none; /* Убираем рамку */
+  font-size: 18px; /* Устанавливаем размер шрифта */
+  cursor: pointer; /* Меняем курсор на "указатель" */
+}
+
+.hero__christmas, 
+.hero__new-year {
+  font-family: 'Allura'; /* Устанавливаем шрифт Allura */
+  font-style: italic; /* Делаем текст курсивным */
+  color: #fff; /* Устанавливаем белый цвет текста */
+  font-size: 24px; /* Устанавливаем размер шрифта */
+  font-weight: 400; /* Устанавливаем нормальную насыщенность шрифта */
+  line-height: 24px; /* Устанавливаем межстрочный интервал */
+  letter-spacing: 0.05em; /* Устанавливаем расстояние между буквами */
+  text-align: center; /* Выравниваем текст по центру */
+  text-underline-position: from-font; /*  Позиционируем подчеркивание текста */
+  text-decoration-skip-ink: none; /*  Устанавливаем тип пропуска чернил для подчеркивания */ 
+}
+
+.hero__subtitle {
+  font-family: 'Playfair Display', serif; /* Устанавливаем шрифт Playfair Display */
+  font-size: 16px; /* Устанавливаем размер шрифта */
+  font-weight: 400; /* Устанавливаем нормальную насыщенность шрифта */
+  line-height: 26px; /* Устанавливаем межстрочный интервал */
+  letter-spacing: 0.05em; /* Устанавливаем расстояние между буквами */
+  color: #ffffff; /* Устанавливаем белый цвет текста */
+}
+
+.hero__subtitle_large {
+  font-family: 'Montserrat'; /* Устанавливаем шрифт Montserrat */
+  font-size: 32px; /* Устанавливаем размер шрифта */
+  line-height: 48px; /* Устанавливаем межстрочный интервал */
+  font-weight: 600; /* Устанавливаем полужирную насыщенность шрифта */
+  margin-bottom: 40px; /* Добавляем отступ снизу */
+  letter-spacing: 0.18em; /* Устанавливаем расстояние между буквами */
+  text-align: center; /* Выравниваем текст по центру */
+  text-underline-position: from-font; /* Позиционируем подчеркивание текста */
+  text-decoration-skip-ink: none; /* Устанавливаем тип пропуска чернил для подчеркивания */
+  max-width: 30%; /* Ограничиваем максимальную ширину */
+}
+
+.hero__button {
+  background: #181C29; /* Устанавливаем тёмно-синий цвет фона */
+  border-radius: 20px; /* Добавляем скругление углов */
+  padding: 20px 32px; /* Добавляем отступы */
+  font-family: 'Playfair Display', serif; /* Устанавливаем шрифт Playfair Display */
+  color: #ffffff; /* Устанавливаем белый цвет текста */
+  font-size: 20px; /* Устанавливаем размер шрифта */
+  line-height: 25px; /* Устанавливаем межстрочный интервал */
+  font-weight: 700; /* Устанавливаем полужирную насыщенность шрифта */
+  border: none; /* Убираем рамку */
+  cursor: pointer; /* Меняем курсор на "указатель" */
+}
+
+.about {
+  background: url(bg-snow.png), #FF4646; /* Устанавливаем фоновые изображения */
+  padding: 60px 8px; /* Добавляем отступы */
+}
+
+.about__inner {
+  display: flex; /* Делаем about__inner flex-контейнером */
+  flex-direction: row; /* Выстраиваем элементы в строку */
+  align-items: center; /* Центрируем элементы по вертикали */
+  padding: 0px; /* Убираем отступы */
+  background: #FFFFFF; /* Устанавливаем белый фон */
+  border-radius: 20px; /* Добавляем скругление углов */
+  position: relative; /* Устанавливаем относительное позиционирование */
+}
+
+.about__content {
+  padding: 60px 0px; /*  Добавляем отступы */
+  gap: 20px; /*  Добавляем отступ между элементами */
+  max-width: 426px; /*  Ограничиваем максимальную ширину */
+  position: absolute; /*  Устанавливаем абсолютное позиционирование */
+  left: 5%; /*  Сдвигаем блок от левого края */
+}
+
+.about__title {
+  font-family: 'Allura'; /*  Устанавливаем шрифт Allura */
+  font-style: normal; /*  Устанавливаем нормальное начертание */
+  font-weight: 400; /*  Устанавливаем нормальную насыщенность */
+  font-size: 24px; /*  Устанавливаем размер шрифта */
+  line-height: 100%; /*  Устанавливаем высоту строки */
+  letter-spacing: 0.05em; /*  Устанавливаем расстояние между буквами */
+  color: #FF4646; /*  Устанавливаем красный цвет */
+}
+
+.about__heading {
+  font-family: 'Montserrat'; /*  Устанавливаем шрифт Montserrat */
+  font-style: normal; /*  Устанавливаем нормальное начертание */
+  font-weight: 600; /*  Устанавливаем полужирную насыщенность */
+  font-size: 24px; /*  Устанавливаем размер шрифта */
+  line-height: 152%; /*  Устанавливаем высоту строки */
+  letter-spacing: 0.16em; /*  Устанавливаем расстояние между буквами */
+  text-transform: uppercase; /*  Делаем текст заглавными буквами */
+  color: #181C29; /*  Устанавливаем тёмно-синий цвет */
+}
+
+.about__text {
+  font-family: 'Montserrat'; /*  Устанавливаем шрифт Montserrat */
+  font-style: normal; /*  Устанавливаем нормальное начертание */
+  font-weight: 400; /*  Устанавливаем нормальную насыщенность */
+  font-size: 16px; /*  Устанавливаем размер шрифта */
+  line-height: 148%; /*  Устанавливаем высоту строки */
+  color: #181C29; /*  Устанавливаем тёмно-синий цвет */
+}
+
+.about__image {
+  border-radius: 20px; /*  Добавляем скругление углов */
+  margin-left: auto; /*  Прижимаем изображение к правому краю */
+  align-self: stretch; /*  Растягиваем изображение по высоте родителя */
+}
+
+.about__image__image {
+  width: 638px; /*  Устанавливаем ширину изображения */
+  height: 528px; /*  Устанавливаем высоту изображения */
+  border-radius: 20px; /*  Добавляем скругление углов */
+}
+
+.slider {
+  background-color: #FF4646; /*  Устанавливаем красный цвет фона */
+  background-image: url("https://s3-alpha-sig.figma.com/img/81a3/9777/2dfc048014f1902a0c5cef20e2241de5?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jDx~6nQGNibxvK3cQs46KArvJjYB41HXCB01W6k2GOaDb4bs5wxAzE5YG1qPfK2bmxNjm4ry3ACNHUre04hAbbfC3tHqJhyLQVSP6yumrgpWnpyy4GN-NxgdDqiLfd14H2ASEFOl3lDsAzqOKRsYvhXNUkAURKMDyKaAb45QQqpLQ0d0mRk7dJSC-srTTr9AunYa~Lf8EI~x7iBc45ReI~0wXkyn4mufmVUfMQYbY9aCAlsqbX26OOyYXZVpEFaO1DvuS7PPzO7kLMWAbBP82DvkmFxpu~tDSrbTDvp78D40KRv67vXan-pj2FL-kXf540nq0BUGDOc4241Al2VXWA__"); /*  Устанавливаем фоновое изображение */
+  background-repeat: no-repeat; /*  Запрещаем повторение фонового изображения */
+  padding: 60px 8px; /*  Добавляем отступы */
+}
+
+.container_slider {
+  display: flex; /*  Делаем container_slider flex-контейнером */
+  flex-direction: column; /*  Выстраиваем элементы в колонку */
+  align-items: center; /*  Центрируем элементы по горизонтали */
+  padding: 0px; /*  Убираем отступы */
+  gap: 20px; /*  Добавляем отступ между элементами */
+  max-width: 1276px; /*  Ограничиваем максимальную ширину */
+}
+
+.slider__top {
+  display: flex; /*  Делаем slider__top flex-контейнером */
+  flex-direction: column; /*  Выстраиваем элементы в колонку */
+  align-items: center; /*  Центрируем элементы по горизонтали */
+  padding: 0px; /*  Убираем отступы */
+  gap: 12px; /*  Добавляем отступ между элементами */
+  max-width: 426px; /*  Ограничиваем максимальную ширину */
+}
+
+.slider__title {
+  font-family: 'Allura', cursive; /* Устанавливаем шрифт Allura */
+  font-style: italic; /* Делаем текст курсивным */
+  font-weight: 400; /* Устанавливаем нормальную насыщенность шрифта */
+  font-size: 24px; /* Устанавливаем размер шрифта */
+  line-height: 100%; /* Устанавливаем высоту строки */
+  text-align: center; /* Выравниваем текст по центру */
+  letter-spacing: 0.05em; /* Устанавливаем расстояние между буквами */
+  color: #FFFFFF; /* Устанавливаем белый цвет текста */
+}
+
+.slider__subtitle {
+  font-family: 'Montserrat'; /* Устанавливаем шрифт Montserrat */
+  font-style: normal; /* Устанавливаем нормальное начертание */
+  font-weight: 600; /* Устанавливаем полужирную насыщенность */
+  font-size: 24px; /* Устанавливаем размер шрифта */
+  line-height: 152%; /* Устанавливаем высоту строки */
+  text-align: center; /* Выравниваем текст по центру */
+  letter-spacing: 0.16em; /* Устанавливаем расстояние между буквами */
+  text-transform: uppercase; /* Делаем текст заглавными буквами */
+  color: #FFFFFF; /* Устанавливаем белый цвет текста */
+}
+
+.slider__row {
+  display: flex; /* Делаем slider__row flex-контейнером */
+  justify-content: center; /* Центрируем элементы по горизонтали */
+  align-items: flex-start; /* Выравниваем элементы по верху */
+  padding: 0px; /* Убираем отступы */
+  width: 1276px; /* Устанавливаем фиксированную ширину */
+  height: 200px; /* Устанавливаем фиксированную высоту */
+  gap: 20px; /* Добавляем отступ между элементами */
+}
+
+.slider__item {
+  display: flex; /* Делаем slider__item flex-контейнером */
+  flex-direction: row; /* Выстраиваем элементы в строку */
+  align-items: center; /* Центрируем элементы по вертикали */
+  padding: 0px; /* Убираем отступы */
+  gap: 20px; /* Добавляем отступ между элементами */
+}
+
+.slider__item-text {
+  font-family: 'Montserrat'; /* Устанавливаем шрифт Montserrat */
+  font-style: normal; /* Устанавливаем нормальное начертание */
+  font-weight: 600; /* Устанавливаем полужирную насыщенность */
+  font-size: 80px; /* Устанавливаем размер шрифта */
+  line-height: 97.52px; /* Устанавливаем высоту строки */
+  text-align: center; /* Выравниваем текст по центру */
+  text-transform: uppercase; /* Делаем текст заглавными буквами */
+  color: #FFFFFF; /* Устанавливаем белый цвет текста */
+}
+
+.slider__item img {
+  width: 200px; /* Устанавливаем ширину изображения */
+  height: 200px; /* Устанавливаем высоту изображения */
+  border-radius: 20px; /* Добавляем скругление углов */
+}
+
+.slider__bottom {
+  display: flex; /* Делаем slider__bottom flex-контейнером */
+  flex-direction: row; /* Выстраиваем элементы в строку */
+  justify-content: center; /* Центрируем элементы по горизонтали */
+  align-items: center; /* Центрируем элементы по вертикали */
+  padding: 0px; /* Убираем отступы */
+  gap: 20px; /* Добавляем отступ между элементами */
+}
+
+.slider__button {
+  box-sizing: border-box; /*  Включаем рамку и отступы в общую ширину и высоту */
+  padding: 0px; /*  Убираем отступы */
+  width: 56px; /*  Устанавливаем ширину */
+  height: 56px; /*  Устанавливаем высоту */
+  border: 1px solid rgba(255, 255, 255, 0.4); /*  Добавляем рамку */
+  border-radius: 20px; /*  Добавляем скругление углов */
+  background-color: transparent; /*  Устанавливаем прозрачный фон */
+  margin-top: 40px; /*  Добавляем отступ сверху */
+}
+
+.slider__button_prev {
+  /*  Стили для кнопки "влево" */
+}
+
+.slider__button_next {
+  /*  Стили для кнопки "вправо" */
+}
+
+.best-gifts {
+  background-color: #FF4646; /* Устанавливаем красный цвет фона */
+  background-image: url("https://s3-alpha-sig.figma.com/img/81a3/9777/2dfc048014f1902a0c5cef20e2241de5?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jDx~6nQGNibxvK3cQs46KArvJjYB41HXCB01W6k2GOaDb4bs5wxAzE5YG1qPfK2bmxNjm4ry3ACNHUre04hAbbfC3tHqJhyLQVSP6yumrgpWnpyy4GN-NxgdDqiLfd14H2ASEFOl3lDsAzqOKRsYvhXNUkAURKMDyKaAb45QQqpLQ0d0mRk7dJSC-srTTr9AunYa~Lf8EI~x7iBc45ReI~0wXkyn4mufmVUfMQYbY9aCAlsqbX26OOyYXZVpEFaO1DvuS7PPzO7kLMWAbBP82DvkmFxpu~tDSrbTDvp78D40KRv67vXan-pj2FL-kXf540nq0BUGDOc4241Al2VXWA__"); /* Устанавливаем фоновое изображение */
+  background-repeat: no-repeat; /* Запрещаем повторение фонового изображения */
+}
+
+.best-gifts__inner {
+  display: flex; /* Делаем best-gifts__inner flex-контейнером */
+  flex-direction: column; /* Выстраиваем элементы в колонку */
+  align-items: center; /* Центрируем элементы по горизонтали */
+}
+
+.best-gifts__top {
+  text-align: center; /* Выравниваем текст по центру */
+}
+
+.best-gifts__title {
+  font-family: 'Allura', cursive; /* Устанавливаем шрифт Allura */
+  font-size: 24px; /* Устанавливаем размер шрифта */
+  font-weight: 400; /* Устанавливаем нормальную насыщенность шрифта */
+  line-height: 24px; /* Устанавливаем межстрочный интервал */
+  letter-spacing: 0.05em; /* Устанавливаем расстояние между буквами */
+  color: #FFFFFF; /* Устанавливаем белый цвет текста */
+}
+
+.best-gifts__subtitle {
+  font-family: 'Montserrat'; /* Устанавливаем шрифт Montserrat */
+  font-size: 24px; /* Устанавливаем размер шрифта */
+  font-weight: 600; /* Устанавливаем полужирную насыщенность */
+  line-height: 36.48px; /* Устанавливаем высоту строки */
+  letter-spacing: 0.16em; /* Устанавливаем расстояние между буквами */
+  text-transform: uppercase; /* Делаем текст заглавными буквами */
+  color: #FFFFFF; /* Устанавливаем белый цвет текста */
+}
+
+.best-gifts__row {
+  display: flex; /* Делаем best-gifts__row flex-контейнером */
+  gap: 20px; /* Добавляем отступ между элементами */
+}
+
+.best-gifts__card {
+  display: flex; /* Делаем best-gifts__card flex-контейнером */
+  flex-direction: column; /* Выстраиваем элементы в колонку */
+  align-items: center; /* Центрируем элементы по горизонтали */
+  padding: 32px 20px 20px; /* Добавляем отступы */
+  gap: 12px; /* Добавляем отступ между элементами */
+  width: 248px; /* Устанавливаем ширину карточки */
+  height: 368px; /* Устанавливаем высоту карточки */
+  background: #FFFFFF; /* Устанавливаем белый фон */
+  border-radius: 20px; /* Добавляем скругление углов */
+}
+
+.best-gifts__card-image {
+  width: 208px; /* Устанавливаем ширину контейнера с картинкой */
+  height: 208px; /* Устанавливаем высоту контейнера с картинкой */
+}
+
+.best-gifts__card-image img {
+  width: 100%; /* Изображение занимает всю ширину контейнера */
+  height: 100%; /* Изображение занимает всю высоту контейнера */
+  object-fit: cover; /* Изображение масштабируется и заполняет контейнер */
+  border-radius: 20px; /* Добавляем скругление углов */
+}
+
+.best-gifts__card-content {
+  text-align: center; /* Выравниваем текст по центру */
+}
+
+.best-gifts__card-title {
+  font-family: 'Montserrat'; /* Устанавливаем шрифт Montserrat */
+  font-style: normal; /* Устанавливаем нормальное начертание */
+  font-weight: 600; /* Устанавливаем полужирную насыщенность */
+  font-size: 16px; /* Устанавливаем размер шрифта */
+  line-height: 20px; /* Устанавливаем высоту строки */
+  text-align: center; /* Выравниваем текст по центру */
+  letter-spacing: 0.1em; /* Устанавливаем расстояние между буквами */
+  text-transform: uppercase; /* Делаем текст заглавными буквами */
+  color: #181C29; /* Устанавливаем тёмно-синий цвет */
+}
+
+.best-gifts__card-subtitle {  
+  font-family: 'Allura'; /*  Устанавливаем шрифт Allura */
+  font-style: normal; /*  Устанавливаем нормальное начертание */
+  font-weight: 400; /*  Устанавливаем нормальную насыщенность */
+  font-size: 20px; /*  Устанавливаем размер шрифта */
+  line-height: 25px; /*  Устанавливаем высоту строки */
+  text-align: center; /*  Выравниваем текст по центру */
+  letter-spacing: 0.05em; /*  Устанавливаем расстояние между буквами */
+  color: #181C29; /*  Устанавливаем тёмно-синий цвет */
+}
+
+.cta {
+  background-color: #FF4646; /* Устанавливаем красный цвет фона */
+  background-image:
+    url("https://s3-alpha-sig.figma.com/img/116b/cac3/04957fcbcda39d1d47f087b8447ea5a8?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=B5Ke4ZVO4UP1XSfo18CzED95KOiZVktoYKviawMgZsh9ltiVMZW7q8DA7EMTGJ4SBvV0WeO-CKFuwv0gmLuTYFc98GL6DxMmvuxwcqxXTWYoBaZA1h5t7t80QrsqydQ3TN7GCEfFU2oACDiSZQEeeOV8WEwcH93Njr3TDn1yaUdCidjyKiiRoNgZXvdcedWPu6gYkkL9k2OFv8EqXXqJ3pG~f7YgWJBxH8RvcJJvPsZK2KyMA6OdD4w46GG4mugwstAdpxZtnuLzan2VjJIsQzcO7mUoA8QFsqlPtld3XS3ABfzS85Zv5OE~6DuC2-FYT7e9y3OwLjAi~laDg4VDJA__"),
+    url("https://s3-alpha-sig.figma.com/img/81a3/9777/2dfc048014f1902a0c5cef20e2241de5?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jDx~6nQGNibxvK3cQs46KArvJjYB41HXCB01W6k2GOaDb4bs5wxAzE5YG1qPfK2bmxNjm4ry3ACNHUre04hAbbfC3tHqJhyLQVSP6yumrgpWnpyy4GN-NxgdDqiLfd14H2ASEFOl3lDsAzqOKRsYvhXNUkAURKMDyKaAb45QQqpLQ0d0mRk7dJSC-srTTr9AunYa~Lf8EI~x7iBc45ReI~0wXkyn4mufmVUfMQYbY9aCAlsqbX26OOyYXZVpEFaO1DvuS7PPzO7kLMWAbBP82DvkmFxpu~tDSrbTDvp78D40KRv67vXan-pj2FL-kXf540nq0BUGDOc4241Al2VXWA__"); /* Устанавливаем фоновые изображения */
+  background-repeat: no-repeat; /* Запрещаем повторение фоновых изображений */
+}
+
+.container_cta {
+  margin: 0 auto; /* Центрируем контейнер по горизонтали */
+  display: flex; /* Делаем container_cta flex-контейнером */
+  flex-direction: column; /* Выстраиваем элементы в колонку */
+  align-items: center; /* Центрируем элементы по горизонтали */
+  gap: 20px; /* Добавляем отступ между элементами */
+  max-width: 426px; /* Ограничиваем максимальную ширину */
+  padding: 60px 0; /* Добавляем вертикальные отступы */
+}
+
+.cta__inner {
+  display: flex; /* Делаем cta__inner flex-контейнером */
+  flex-direction: column; /* Выстраиваем элементы в колонку */
+  align-items: center; /* Центрируем элементы по горизонтали */
+  justify-content: center; /* Центрируем элементы по вертикали */
+  max-width: 426px; /* Ограничиваем максимальную ширину */
+  padding: 60px 0; /* Добавляем вертикальные отступы */
+}
+
+.cta__content {
+  text-align: center; /* Выравниваем текст по центру */
+  display: flex; /* Делаем cta__content flex-контейнером */
+  justify-content: center; /* Центрируем элементы по горизонтали */
+  flex-direction: column; /* Выстраиваем элементы в колонку */
+}
+
+.cta__heading {  
+  font-family: 'Montserrat'; /*  Устанавливаем шрифт Montserrat */
+  font-style: normal; /*  Устанавливаем нормальное начертание */
+  font-weight: 600; /*  Устанавливаем полужирную насыщенность */
+  font-size: 24px; /*  Устанавливаем размер шрифта */
+  line-height: 152%; /*  Устанавливаем высоту строки */
+  text-align: center; /*  Выравниваем текст по центру */
+  letter-spacing: 0.16em; /*  Устанавливаем расстояние между буквами */
+  text-transform: uppercase; /*  Делаем текст заглавными буквами */
+  align-self: center; /*  Выравниваем элемент по центру */
+  color: #FFFFFF; /*  Устанавливаем белый цвет */
+}
+
+.cta__button {
+  display: flex; /*  Делаем cta__button flex-контейнером */
+  flex-direction: row; /*  Выстраиваем элементы в строку */
+  justify-content: center; /*  Центрируем элементы по горизонтали */
+  align-items: center; /*  Центрируем элементы по вертикали */
+  padding: 20px 32px; /*  Добавляем отступы */
+  text-align: center; /*  Выравниваем текст по центру */
+  width: 235px; /*  Устанавливаем ширину */
+  height: 56px; /*  Устанавливаем высоту */
+  color: #FFFFFF; /*  Устанавливаем белый цвет текста */
+  background: #181C29; /*  Устанавливаем тёмно-синий цвет фона */
+  border-radius: 20px; /*  Добавляем скругление углов */
+  align-self: center; /*  Выравниваем элемент по центру */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.cta__timer-wrapper {
+  /*  Стили для контейнера с таймером */
+  text-align: center; /*  Выравниваем текст по центру */
+  display: flex; /*  Делаем cta__timer-wrapper flex-контейнером */
+  flex-direction: column; /*  Выстраиваем элементы в колонку */
+  align-items: center; /*  Выравниваем элементы по центру по горизонтали */
+  padding: 0px; /*  Убираем отступы */
+  gap: 12px; /*  Добавляем отступ между элементами */
+  align-self: center; /*  Выравниваем элемент по центру */
+  width: 426px; /*  Устанавливаем ширину */
+  height: 128px; /*  Устанавливаем высоту */
+}
+
+.cta__timer-title {
+  /*  Стили для надписи "The New Year..." */
+  font-family: 'Montserrat'; /*  Устанавливаем шрифт Montserrat */
+  font-style: italic; /*  Делаем текст курсивным */
+  font-weight: 400; /*  Устанавливаем нормальную насыщенность */
+  font-size: 16px; /*  Устанавливаем размер шрифта */
+  line-height: 148%; /*  Устанавливаем высоту строки */
+  text-align: center; /*  Выравниваем текст по центру */
+  align-self: center; /*  Выравниваем элемент по центру */
+  color: #FFFFFF; /*  Устанавливаем белый цвет */
+}
+
+.cta__timer {
+  /*  Стили для таймера */
+  display: flex; /*  Делаем cta__timer flex-контейнером */
+  flex-direction: row; /*  Выстраиваем элементы в строку */
+  justify-content: center; /*  Центрируем элементы по горизонтали */
+  align-items: center; /*  Центрируем элементы по вертикали */
+  padding: 0px; /*  Убираем отступы */
+  gap: 12px; /*  Добавляем отступ между элементами */
+  width: 374px; /*  Устанавливаем ширину */
+  height: 56px; /*  Устанавливаем высоту */
+}
+
+.cta__timer-item {
+  /*  Стили для каждого элемента таймера */
+  display: flex; /*  Делаем cta__timer-item flex-контейнером */
+  flex-direction: column; /*  Выстраиваем элементы в колонку */
+  justify-content: center; /*  Центрируем элементы по вертикали */
+  align-items: center; /*  Центрируем элементы по горизонтали */
+  padding: 0px; /*  Убираем отступы */
+  gap: 4px; /*  Добавляем отступ между элементами */
+  width: 56px; /*  Устанавливаем ширину */
+  height: 56px; /*  Устанавливаем высоту */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.cta__timer-value {
+  /*  Стили для значения таймера */
+  font-family: 'Montserrat'; /*  Устанавливаем шрифт Montserrat */
+  font-style: normal; /*  Устанавливаем нормальное начертание */
+  font-weight: 400; /*  Устанавливаем нормальную насыщенность */
+  font-size: 24px; /*  Устанавливаем размер шрифта */
+  line-height: 116%; /*  Устанавливаем высоту строки */
+  text-align: center; /*  Выравниваем текст по центру */
+  letter-spacing: 0.08em; /*  Устанавливаем расстояние между буквами */
+  color: #FFFFFF; /*  Устанавливаем белый цвет */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.cta__timer-label {
+  /*  Стили для подписи таймера */
+  font-family: 'Montserrat'; /*  Устанавливаем шрифт Montserrat */
+  font-style: normal; /*  Устанавливаем нормальное начертание */
+  font-weight: 400; /*  Устанавливаем нормальную насыщенность */
+  font-size: 10px; /*  Устанавливаем размер шрифта */
+  line-height: 12px; /*  Устанавливаем высоту строки */
+  text-align: center; /*  Выравниваем текст по центру */
+  letter-spacing: 0.1em; /*  Устанавливаем расстояние между буквами */
+  text-transform: uppercase; /*  Делаем текст заглавными буквами */
+  color: #FFFFFF; /*  Устанавливаем белый цвет */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.cta__timer-divider {
+  /*  Стили для разделителя */
+  width: 1px; /*  Устанавливаем ширину */
+  height: 32px; /*  Устанавливаем высоту */
+  background: #FFFFFF; /*  Устанавливаем белый цвет фона */
+  opacity: 0.4; /*  Устанавливаем прозрачность */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.footer {
+  color: #000 !important; /* Устанавливаем чёрный цвет для всего текста в футере */
+  padding: 60px 8px; /* Добавляем отступы */
+  align-items: center; /* Центрируем контейнеры */
+}
+
+.footer__inner {
+  display: flex; /* Делаем footer__inner flex-контейнером */
+  align-items: flex-start; /* Выравниваем элементы по верху */
+  justify-content: space-between; /* Распределяем элементы по ширине */
+  margin-bottom: 40px; /* Добавляем отступ снизу */
+  align-items: center; /* Центрируем контейнеры */
+}
+
+.footer__contacts {
+  display: flex; /* Делаем footer__contacts flex-контейнером */
+  gap: 178px; /* Устанавливаем расстояние между контактами */
+}
+
+.footer__contact {
+  display: flex; /* Делаем footer__contact flex-контейнером */
+  flex-direction: column; /* Выстраиваем элементы в колонку */
+  align-items: center; /* Центрируем элементы по горизонтали */
+}
+
+.footer__contact svg {
+  margin-bottom: 20px; /* Добавляем отступ снизу */
+}
+
+.footer__contact-phone {
+  font-family: 'Montserrat', sans-serif; /* Устанавливаем шрифт Montserrat */
+  font-size: 16px; /* Устанавливаем размер шрифта */
+  line-height: 20px; /* Устанавливаем высоту строки */
+  margin-bottom: 8px; /* Добавляем отступ снизу */
+}
+
+.footer__contact-label, /*  Стили для подписей под контактами */
+.footer__contact-text, /*  Стили для текста "Magic forest" */
+.footer__contact-email { /*  Стили для email */
+  font-family: 'Montserrat', sans-serif; /*  Устанавливаем шрифт Montserrat */
+  font-size: 14px; /*  Устанавливаем размер шрифта */
+  line-height: 17px; /*  Устанавливаем высоту строки */
+  letter-spacing: 0.1em; /*  Устанавливаем расстояние между буквами */
+  text-transform: uppercase; /*  Делаем текст заглавными буквами */
+}
+
+.footer__social {
+  display: flex; /*  Делаем footer__social flex-контейнером */
+  gap: 24px; /*  Устанавливаем расстояние между иконками */
+}
+
+.footer__social-link {
+  /*  Стили для каждой ссылки на соц. сеть */
+  display: block; /*  Делаем ссылки блочными элементами, чтобы они были кликабельны по всей площади */
+  width: 24px; /*  Устанавливаем ширину */
+  height: 24px; /*  Устанавливаем высоту */
+}
+
+.footer__copyright {
+  font-family: 'Montserrat', sans-serif; /*  Устанавливаем шрифт Montserrat */
+  font-size: 14px; /*  Устанавливаем размер шрифта */
+  line-height: 17px; /*  Устанавливаем высоту строки */
+  text-align: center; /*  Выравниваем текст по центру */
+  margin-bottom: 8px; /*  Добавляем отступ снизу */
+}
+
+.footer__author {
+  font-family: 'Montserrat', sans-serif; /*  Устанавливаем шрифт Montserrat */
+  font-size: 14px; /*  Устанавливаем размер шрифта */
+  line-height: 17px; /*  Устанавливаем высоту строки */
+  text-align: center; /*  Выравниваем текст по центру */
+}
