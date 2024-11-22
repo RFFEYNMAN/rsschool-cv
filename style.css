@@ -1,91 +1,80 @@
-* {
-    box-sizing: border-box;
-  }
+/* style.css */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
-    margin: 0; padding: 0;
     font-family: 'Roboto', sans-serif;
-}
-html {
-    scroll-behavior: smooth; 
-  }
-header {
-    border: 1px solid red;
-}
-main {
-    border: 1px solid red;
-}
-footer {
-    border: 1px solid red;
-}
-  .container {
-    max-width: 1024px;
-    margin: 0 auto;
-} 
-  .nav-link {
-  transition: .3s;
-  cursor: pointer
-}
-  .nav-list {
-    margin-top: 1rem;
-    list-style: none;
-    padding: 0 50px;
-    line-height: 50px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
     margin: 0;
-    list-style: none;
-  }
-  .ps {
-    color: rgb(255, 87, 51);
-  }
-  .main-container {
-    display: flex;
-  flex-wrap: wrap;
-  }
-  .section {
-    width: 50%;
-  }
-  @media (max-width: 768px) {
-    .section {
-      width: 100%;
-    }
-  }
-img {
-    margin-left: auto;
-    margin-right: auto;
-    width: 130px;
-    height: 180px;
-  }
-p { 
-    text-align: center 
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
-h4 { 
-    text-align: center 
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
 }
-h2 {
-    text-align: center
-}
-h3 {
-    text-align: center
-    color: rgb(0, 0, 0);
-}
-li {
+
+.nav-list {
     list-style-type: none;
-    text-align: center
+    padding: 0;
 }
+
+.nav-item {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.container {
+    background-image: url('https://www.canva.com/design/DAGXPix2828/-JElEOEhf-vk1N0XgS1kFQ/view?utm_content=DAGXPix2828&utm_campaign=designshare&utm_medium=link&utm_source=editor');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.main-container {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.section-title {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
 ol {
-    text-align: center
+    padding-left: 20px;
 }
-  .logo {
-    margin-left: auto;
-    margin-right: auto;
-    width: 45px;
-    height: 45px;
-  } 
+
+h6.ps { font-style: italic; color: #555; } 
+
+footer { 
+    background-color: #d2f5d3; 
+    color: white; 
+    text-align: center; padding: 10px 0; 
+    margin-top: 20px;
+}
