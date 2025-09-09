@@ -1,7 +1,7 @@
-# rsschool-cv
-# My CV for RS School
+## rsschool-cv
+## My CV for RS School
 
-## Andrei kolesnikov
+# Andrei kolesnikov
 ---
 ### Contacts
 * Location: Wroclaw, Poland
