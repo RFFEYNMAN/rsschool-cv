@@ -16,7 +16,7 @@ I study at RS School
 DSTU
 
 ### Languages: 
-Russian
-Ukrainian 
-English B1
-Polish B2
+* Russian
+* Ukrainian 
+* English B1
+* Polish B2
